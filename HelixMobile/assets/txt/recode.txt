@@ -1,0 +1,913 @@
+
+
+
+
+
+===============================================================================================================================================
+	
+		//**************************************************************************************** 
+		//   CRUD  1 option:
+//	public int insert(String tableName, ContentValues rowToCreate) {
+//
+//        db.insert(tableName, null, rowToCreate);
+//        String[] columnsToShow = null;
+//        String selection = null;
+//        String[] selectionArgs = null;
+//        String groupBy = null;
+//        String having = null;
+//        String orderBy = "ID DESC LIMIT 1";
+//        Cursor query = db.query(tableName, columnsToShow, selection, selectionArgs, groupBy, having, orderBy);
+//        query.moveToFirst();
+//        int indexId = query.getColumnIndex("ID");
+//        int id = query.getInt(indexId);
+//        close();
+//        return id;
+//    }
+
+//    public void update(String tableName, int rowIdToUpdate, ContentValues rowToUpdate) {
+//
+//        final String whereClause = "ID=" + rowIdToUpdate;
+//        db.update(tableName, rowToUpdate, whereClause, null);
+//        close();
+//    }
+
+//    public void dropTable(String tableName) {
+//
+//        String sql = "DROP TABLE IF EXISTS " + tableName;
+//        db.execSQL(sql);
+//        close();
+//    }
+//
+//    public boolean dropDatabase(Context appContext, String databaseName) {
+//        return appContext.deleteDatabase(databaseName);
+//    }
+//
+//    public void deleteById(String tableName, int id) {
+//
+//        String whereClause = "ID=" + id;
+//        String[] whereArgs = null;
+//        db.delete(tableName, whereClause, whereArgs);
+//        close();
+//    }
+//
+//    public Cursor selectAll(String tableName, String[] columnNamesToShow) {
+//
+//        String[] columnsToShow = columnNamesToShow;
+//        String selection = null;
+//        String[] selectionArgs = null;
+//        String groupBy = null;
+//        String having = null;
+//        String orderBy = null;
+//        return db.query(tableName, columnsToShow, selection, selectionArgs, groupBy, having, orderBy);
+//    }
+//
+//    public Cursor selectAllOrderBy(String tableName, String[] columnNamesToShow, String columnNameToOrderBy) {
+//
+//        String[] columnsToShow = columnNamesToShow;
+//        String selection = null;
+//        String[] selectionArgs = null;
+//        String groupBy = null;
+//        String having = null;
+//        String orderBy = columnNameToOrderBy;
+//        return db.query(tableName, columnsToShow, selection, selectionArgs, groupBy, having, orderBy);
+//    }
+//
+//    public Cursor selectAllDistinct(String tableName, String[] columnNamesToShow, String columnNameToDistinct) {
+//
+//        String[] columnsToShow = columnNamesToShow;
+//        String selection = null;
+//        String[] selectionArgs = null;
+//        String groupBy = columnNameToDistinct;
+//        String having = null;
+//        String orderBy = columnNameToDistinct;
+//        return db.query(tableName, columnsToShow, selection, selectionArgs, groupBy, having, orderBy);
+//    }
+//
+//    public Cursor selectRowById(String tableName, int id) {
+//
+//        String[] columnsToShow = null;
+//        String selection = "ID=" + id;
+//        String[] selectionArgs = null;
+//        String groupBy = null;
+//        String having = null;
+//        String orderBy = null;
+//        return db.query(tableName, columnsToShow, selection, selectionArgs, groupBy, having, orderBy);
+//    }
+//
+//    public Cursor getDifferences(String tableName, String timestamp) {
+//
+//        String[] columnsToShow = null;
+//        String selection = "TIMESTAMP = '" + timestamp + "'";
+//        String[] selectionArgs = null;
+//        String groupBy = null;
+//        String having = null;
+//        String orderBy = null;
+//        return db.query(tableName, columnsToShow, selection, selectionArgs, groupBy, having, orderBy);
+//    }
+
+//    private void garantConnection(Context appContext, Table tableToOpen) {
+//        if (appContext == null || tableToOpen == null) {
+//            throw new NullPointerException("appContext and tableToOpen can't be set to null");
+//        }
+//    }
+    
+
+
+=====================================================================================================================================
+				
+//				HashMap hmI = new HashMap();
+//				String[] keys = new String[hm.size()];
+//				
+//				hm.keySet().toArray(keys);
+//				Log.i( " The KEYS VIEW ", Arrays.asList(keys) + "");
+//				for (int i = 0; i < hm.size(); i++) {
+//					
+//					hmI.put(keys[i], hm.get("SIFRA"));
+//					hmI.put(keys[i], hm.get("+"));
+//					hmI.put(keys[i], hm.get("CENA"));
+//					hmI.put(keys[i], hm.get("BR"));
+//					hmI.put(keys[i], hm.get("KOLICINA"));
+//					hmI.put(keys[i], hm.get("-"));
+//					hmI.put(keys[i], hm.get("NAZIV"));
+//				}
+//				Log.i( " The HMI VIEW ", hmI + "");
+ 
+ ========================================================================================================
+ <!-- <ImageView
+        android:id="@+id/delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/menu_arrow_end"
+        android:contentDescription="@string/app_name"/>  -->
+
+
+
+
+============================================================================================================================
+// ************************************** TESTING
+	// ********************************************
+	// private static final String METHOD_NAME = "TopGoalScorers";
+	// private static final String SOAP_ACTION =
+	// "http://footballpool.dataaccess.eu/data/TopGoalScorers";
+	// private static final String NAMESPACE =
+	// "http://footballpool.dataaccess.eu";
+	// private static final String URL =
+	// "http://footballpool.dataaccess.eu/data/info.wso";
+	// **************************************** END TESTING
+	// ****************************************
+
+
+=============================================================================================================================	
+
+
+		
+//		for (int i = 0; i < masi.size(); i++) {
+//			masiCollections.put(masi.get(i), paragoniStringArrayList );
+//		}
+//		masiCollections.put("masa:0", masiData );
+//		masiCollections.put("masa:1", masiData );
+//		masiCollections.put("masa:2", masiData );
+//		masiCollections.put("masa:3", masiData );
+
+
+
+//		expandMasi.setOnItemClickListener(new OnItemClickListener() {
+//
+//			@Override
+//			public void onItemClick(AdapterView<?> parent, View view,
+//					int position, long id) {
+//				// TODO Auto-generated method stub
+//				
+//			}
+//			
+//		});
+//		
+//		TextView text = (TextView) expandMasi.getAdapter().getItem((int) expandMasi.getSelectedPosition());
+//		Log.v("Logging value :  ", text.toString());
+		
+		
+//		masi = new ArrayList<String>();
+//		masi.add("Masa-1");masi.add("Masa-2");masi.add("Masa-3");masi.add("Masa-4");masi.add("Masa-5");
+//		masiCollections = new HashMap<String, List<String>>();
+//		masiCollections.put("Masa-1", masi);
+//		masiCollections.put("Masa-2", masi);
+//		masiCollections.put("Masa-3", masi);
+//		masiCollections.put("Masa-4", masi);
+//		masiCollections.put("Masa-5", masi);
+//		
+//		expandMasi = (ExpandableListView) findViewById(R.id.expandableListView1);
+//		expandMasi.setAdapter(new MyExpandableListAdapter(this,masi,masiCollections));
+
+====================================================================================================================================================	
+														
+							// adeth on 07 04 2014 [ aquaring TIP1 field for writing to database to be general menu possible ]:
+							//artikli.setTip1(tip1);
+							
+							//artikli.setVirtem(  virt_em  );
+							//artikli.setStranski(Short.parseShort(stran_ime) );
+							//artikli.setNabcena(Double.parseDouble(nab_cena));
+							+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+							
+							//String virt_em =  (((SoapObject)results.getProperty(i)).getProperty("VIRT_E_M")).toString();
+							//String stran_ime =  (((SoapObject)results.getProperty(i)).getProperty("STRAN_IME")).toString();
+							//String nab_cena =  (((SoapObject)results.getProperty(i)).getProperty("NABCENA")).toString();
+							
+							//  adeth on 07 04 2014 [ aquaring TIP1 field for writing to database to be general menu possible ]:
+							//String tip1 =  (((SoapObject)results.getProperty(i)).getProperty("TIP1")).toString();
+							
+							//String temp = (String) ((SoapObject) results.getProperty(i)).getProperty("BRAND");
+							//Log.i("Temporary loging just for checking: ", temp);
+							
+//							Log.v("DELIMITER ", "+++++++++++++++++++++++++++++++++++++++++++++++++++++" );
+//							Log.v("The results object dobav is: ",  firma );
+//							Log.v("The results sifra is: ",  sifra );
+//							Log.v("The results naziv is: ",  naziv );
+//							Log.v("The results tarifa is: ",tarifa );
+//							Log.v("The results edinecna merka is: ",  em );
+//							Log.v("The results edinecna prodazna cena is: ",  ed_pr_cena );
+//							Log.v("DELIMITER ", "+++++++++++++++++++++++++++++++++++++++++++++++++++++" );
+
+===================================================================================================================================================
+	//  ************************************* 03  04 2014 ***********************************************************
+	/*
+	 * Button click handler is chenged to be a calling method for activity Masi for setting Number of Table and for showing the orders for that table
+	 */
+//	public void clickNovaMasa(View view) {
+//		String masaText = masaBr.getText().toString();
+//		if (!(masaText.equals("")) && Integer.parseInt(masaText) > 0) {
+//			ispratiOnClick(getCurrentFocus());
+//			if(b) {
+//				artikliNaracani.clear();
+//				masaBr.setText("");
+//				masaBr.requestFocus();
+//				tempListView1.setAdapter(simpleCollectProduct1);
+//			} 
+//			
+//		} else {
+//			AlertDialog.Builder alert = new AlertDialog.Builder(thisVar);
+//			alert.setTitle("Potvrda...");
+//			alert.setMessage("Nemate selektirano broj na masa.\nDali sakate da gi zadrzite naracanite artikli "
+//					+ "\ni da vnesete broj na masa? - Vnesete broj na masa i pritisnete CANCEL.\nVo sprotivno pritisnete OK.");
+//			final EditText input = new EditText(thisVar);
+//			input.setInputType(InputType.TYPE_CLASS_NUMBER);
+//			alert.setView(input);
+//
+//			alert.setPositiveButton("Ok",
+//					new DialogInterface.OnClickListener() {
+//						public void onClick(DialogInterface dialog,
+//								int whichButton) {
+//							artikliNaracani.clear();
+//							masaBr.setText("");
+//							masaBr.requestFocus();
+//							tempListView1.setAdapter(simpleCollectProduct1);
+//						}
+//					});
+//
+//			alert.setNegativeButton("Cancel",
+//					new DialogInterface.OnClickListener() {
+//						public void onClick(DialogInterface dialog,
+//								int whichButton) {
+//							masaBr.setText(input.getText().toString());
+//						}
+//					});
+//
+//			alert.show();
+//		}
+//
+//	}
+
+===============================================================================================================================================
+		// ************ With THREAD:
+//		Thread checkUpdate = new Thread() {
+//
+//			public void run() {
+//
+//				for (int i = 0; i < tempListView1.getCount(); i++) {
+//					double tempPrice = Double.parseDouble((String) ((HashMap) tempListView1.getItemAtPosition(i)).get("CENA"));
+//					double tempQuantity = Double.parseDouble((String) ((HashMap) tempListView1.getItemAtPosition(i)).get("KOLICINA"));
+//					String sifra = ((HashMap<String, String>) tempListView1.getItemAtPosition(i)).get("SIFRA");
+//					int cena = (int) tempPrice;
+//					int kolicina = (int) tempQuantity;
+//					b = sendSOAP(firma, kasa, vraboten, prodavnica, masa,sifra, kolicina, cena, art_date, art_time);
+//				}
+//				return;
+//			} // run()
+//		}; // Thread
+//		checkUpdate.start();
+//		
+	//try {
+			//asT.wait();
+		//} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			//e.printStackTrace();
+		//}
+//		try {
+//			Thread.sleep(5000);
+////			Thread.currentThread().wait();
+//		} catch (InterruptedException e) {
+//			e.printStackTrace();
+//		}
+//		if (b) {
+//			Toast.makeText(getApplicationContext(), "Vashata narachka e uspeshno ispratena...", Toast.LENGTH_LONG).show();
+//			masaBr.setText("");
+//			masaBr.requestFocus();
+//			artikliNaracani.clear();
+//			tempListView1.setAdapter(simpleCollectProduct1);
+//			sumNum.setText("0");
+//			searchArtInp.setText("");
+//			
+//			
+//		} else {
+//			Toast.makeText(getApplicationContext(), "Vashata narachka e NEUSPESHNO ispratena...", Toast.LENGTH_LONG).show();
+//		}
+//		sendButton.setTextColor(Color.WHITE);
+//		
+==================================================================================================================================================
+//			//********************************  31 03 2014
+//			public void IncAndDecClick(View view) {
+//				Log.i("And the View is: ", view + "");
+//				int i = view.getId();
+//				switch(i) {
+//					case R.id.textView1:
+//						Log.w("TEXTVIEW1", "In first text view: " + ((TextView)((View)((View)view.getParent()).getParent()).findViewWithTag("kolicina")).getText() );
+//						TextView t = ((TextView)((View)((View)view.getParent()).getParent()).findViewWithTag("kolicina"));
+//						try {
+//							int kol = Integer.parseInt(t.getText().toString());
+//							kol++;
+//							//Toast.makeText(getApplicationContext(), kol, 4000).show();
+////							sum += Integer.parseInt(((TextView)((View)((View)view.getParent()).getParent()).findViewWithTag("cena")).toString())*kol;
+////							sumNum.setText(sum+"");
+//							t.setText(String.valueOf(kol));
+//						} catch (Exception e) {
+//							Log.w("WRONG NUM", "In NUM Exception view " );
+//						}
+//						
+//						break;
+//					case R.id.textView2:
+//						Log.w("TEXTVIEW2", "In second text view: " + view.getParent());
+//						TextView tt = ((TextView)((View)((View)view.getParent()).getParent()).findViewWithTag("kolicina"));
+//						try {
+//							int kol = Integer.parseInt(tt.getText().toString());
+//							kol--;
+////							sum -= Integer.parseInt(((TextView)((View)((View)view.getParent()).getParent()).findViewWithTag("cena")).toString())*kol;
+////							sumNum.setText(sum+"");
+//							if(kol>0) {
+//								//Toast.makeText(getApplicationContext(), kol, 4000).show();
+//								tt.setText(String.valueOf(kol));
+//							} else {
+//								// REMOVE THE ELEMENT FROM LIST ONE!!!!!!!!!!!!!
+//								//tempListView1.removeViewAt();
+//							}
+//							
+//						} catch (Exception e) {
+//							Log.w("WRONG NUM", "In SECOND NUM Exception view " );
+//						}
+//						
+//						break;
+//					default:
+//						Log.w("DEFAULT_2", "In default text view: " + view.getParent());
+//				}
+//			}
+			//********************************
+===========================================================================================================================	
+		// MENU DRAWER:
+//		mMenuDrawer = MenuDrawer.attach(this,Position.LEFT);
+//		mMenuDrawer.setContentView(R.layout.start_layout);
+//		mMenuDrawer.setMenuView(R.layout.menu_scrollview);
+//		Log.w("MENU", mMenuDrawer.isFocused() +"");
+		
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+		 TIPOVI select query for geting the results for naming the groups:
+select tipovi.id1 from sifri left join tipovi on (sifri.firma=tipovi.firma and sifri.tip1=tipovi.id1)
+
+========================================================================================================================
+private class GetSifri extends AsyncTask<Void, Void, Void> {
+
+		@Override
+		protected Void doInBackground(Void... params) {
+			ServiceHandler sc = new ServiceHandler();
+			
+			String jsonStr = sc.makeServiceCall(url, ServiceHandler.GET);
+			
+			String tempId = "";
+			Log.d("Response: ", "> " + jsonStr);
+			
+			if(jsonStr != null) {
+				 try {
+					JSONArray jsonArr = new JSONArray(jsonStr);
+					
+					for (int i = 0; i < jsonArr.length(); i++) {
+						JSONObject s = jsonArr.getJSONObject(i);
+						
+						String id = s.getString(TAG_ID);
+                        // log id
+						tempId = id;
+
+                        String firma = s.getString(TAG_FIRMA);
+                        String sifra = s.getString(TAG_SIFRA);
+                        String naziv = s.getString(TAG_NAZIV);
+                        String prod2 = s.getString(TAG_PROD2);
+                        String tarifa = s.getString(TAG_TARIFA);
+                        String cena = s.getString(TAG_ED_PR_CENA);
+                        String dobav = s.getString(TAG_DOBAV);
+                        String sifSek = s.getString(TAG_SIFSEK);
+                        
+                        HashMap<String, String> sifrii = new HashMap<String, String>();
+                        
+                     // adding each child node to HashMap key => value
+                        sifrii.put(TAG_ID, id);
+                        sifrii.put(TAG_FIRMA, firma);
+                        sifrii.put(TAG_SIFRA, sifra);
+                        sifrii.put(TAG_NAZIV, naziv);
+                        sifrii.put(TAG_PROD2, prod2);
+                        sifrii.put(TAG_TARIFA, tarifa);
+                        sifrii.put(TAG_ED_PR_CENA, cena);
+                        sifrii.put(TAG_DOBAV, dobav);
+                        sifrii.put(TAG_SIFSEK, sifSek);
+                        
+                        sifriList.add(sifrii);
+					}
+				} catch (JSONException e) {
+					Log.e("INFORMACIJA", "Couldn't get data from "+ tempId + "\n message: " + e.getMessage());
+				}
+			} else {
+                Log.e("com.zoneli.helixmobile.service.ServiceHandler", "Couldn't get any data from the url");
+            }
+			return null;
+		}
+
+		@Override
+		protected void onPreExecute() {
+			super.onPreExecute();
+			// Showing progress dialog
+            pDialog = new ProgressDialog(MainActivity.this);
+            pDialog.setMessage("Please wait...");
+            pDialog.setCancelable(false);
+            pDialog.show();
+		}
+
+		@Override
+		protected void onPostExecute(Void result) {
+			// TODO Auto-generated method stub
+			super.onPostExecute(result);
+			if(pDialog.isShowing()) {
+				pDialog.dismiss();
+			}
+			String[] from = new String[] { TAG_FIRMA, TAG_SIFRA,TAG_NAZIV,TAG_ED_PR_CENA,TAG_DOBAV };
+			int[] to = new int[] {R.id.firma,R.id.sifra, R.id.naziv,R.id.cena,R.id.dobav};
+			
+			adapter = new SimpleAdapter(
+					getApplicationContext(), 
+					sifriList, 
+					R.layout.list_item, 
+					from, 
+					to
+			);
+			
+			//adapter = new SimpleAdapter(getApplicationContext(), sifriList, android.R.id.list, from, to);
+			//Log.e("INFORMACIJA", "sifri list ->> " + Arrays.asList(sifriList));
+			
+			lv.setAdapter(adapter);
+
+			
+		}
+========================================================================================================================
+
+private class GetSifri extends AsyncTask<Void, Void, Void> {
+		
+		
+		
+		@Override
+		protected Void doInBackground(Void... params) {
+			ServiceHandler sc = new ServiceHandler();
+			
+			String jsonStr = sc.makeServiceCall(url, ServiceHandler.GET);
+			
+			String tempId = "";
+			Log.d("Response: ", "> " + jsonStr);
+			
+			if(jsonStr != null) {
+				 try {
+					JSONArray jsonArr = new JSONArray(jsonStr);
+					
+					for (int i = 0; i < jsonArr.length(); i++) {
+						JSONObject s = jsonArr.getJSONObject(i);
+						
+						String id = s.getString(TAG_ID);
+                        // log id
+						tempId = id;
+
+                        String firma = s.getString(TAG_FIRMA);
+                        String sifra = s.getString(TAG_SIFRA);
+                        String naziv = s.getString(TAG_NAZIV);
+                        String prod2 = s.getString(TAG_PROD2);
+                        String tarifa = s.getString(TAG_TARIFA);
+                        String cena = s.getString(TAG_ED_PR_CENA);
+                        String dobav = s.getString(TAG_DOBAV);
+                        String sifSek = s.getString(TAG_SIFSEK);
+                        
+                        HashMap<String, String> sifrii = new HashMap<String, String>();
+                        
+                     // adding each child node to HashMap key => value
+                        sifrii.put(TAG_ID, id);
+                        sifrii.put(TAG_FIRMA, firma);
+                        sifrii.put(TAG_SIFRA, sifra);
+                        sifrii.put(TAG_NAZIV, naziv);
+                        sifrii.put(TAG_PROD2, prod2);
+                        sifrii.put(TAG_TARIFA, tarifa);
+                        sifrii.put(TAG_ED_PR_CENA, cena);
+                        sifrii.put(TAG_DOBAV, dobav);
+                        sifrii.put(TAG_SIFSEK, sifSek);
+                        
+                        sifriList.add(sifrii);
+					}
+				} catch (JSONException e) {
+					Log.e("INFORMACIJA", "Couldn't get data from "+ tempId + "\n message: " + e.getMessage());
+				}
+			} else {
+                Log.e("com.zoneli.helixmobile.service.ServiceHandler", "Couldn't get any data from the url");
+            }
+			return null;
+		}
+
+		@Override
+		protected void onPreExecute() {
+			super.onPreExecute();
+			// Showing progress dialog
+            pDialog = new ProgressDialog(StartClass.this);
+            pDialog.setMessage("Please wait...");
+            pDialog.setCancelable(false);
+            pDialog.show();
+		}
+
+		@Override
+		protected void onPostExecute(Void result) {
+			// TODO Auto-generated method stub
+			super.onPostExecute(result);
+			if(pDialog.isShowing()) {
+				pDialog.dismiss();
+			}
+			// key valus for list adapter
+			final String[] from = new String[] { TAG_ID, TAG_SIFRA, TAG_NAZIV,TAG_KOLICINA, TAG_ED_PR_CENA };
+			// id valus for text viws
+			final int[] to = new int[] {R.id.br_txt,R.id.masi_txt,R.id.ime_txt_r,R.id.kolicina_txt_r,R.id.cena_txt_r};
+			
+			simpleCollectProduct2 = new SimpleAdapter(StartClass.this, sifriList, 	R.layout.list_lays, from, to);
+			tempListView2.setAdapter(simpleCollectProduct2);
+		}
+	}
+
+
+====================================================================================================================================
+		// Referencing Button for UnSent Orders  **************************************
+		
+//		if(DBHelperClass.pendingOrders(thisVar)) {
+//			DBHelperClass dbs = new DBHelperClass(getApplicationContext());
+//			
+//			
+//			Log.v("The HASHMAP values :  ", dbs.getOrderedArtikli().keySet()+ "");
+			
+//			for (String masa : dbs.getOrderedArtikli().keySet()) {
+//				unOrderedBtn = new Button(this);
+//				unOrderedBtn.setText("Neispratena masa broj: [ " + masa + " ]");
+//				tempListView1.addFooterView(unOrderedBtn);
+//			}
+//		}
+		
+//		if(unOrderedBtn != null) {
+//			unOrderedBtn.setOnClickListener(new OnClickListener() {
+//				
+//				
+//				boolean b = false;
+//				
+//				@Override
+//				public void onClick(View v) {
+//					String btnText = unOrderedBtn.getText().toString();
+//					String masaBtnBroj = btnText.substring(btnText.length()-4, btnText.length()-2);
+//					SaveOrderModel som = new SaveOrderModel();
+//					HashMap<String,ArrayList<String>> masaAndArtikli = som.getOrderedValues(masaBtnBroj,thisVar);
+//					
+//					for(String masa : masaAndArtikli.keySet() ) {
+//						Log.v("The HASHMAP values :  ", masaAndArtikli.get(masa)+ "");
+//					}
+					
+//					for(String masa : masaAndArtikli.keySet() ) {
+//						b = sendSOAP(  ((ArrayList<String>)masaAndArtikli.get(masa)).get(1),  //firma
+//								       ((ArrayList<String>)masaAndArtikli.get(masa)).get(2),  //kasa
+//								       ((ArrayList<String>)masaAndArtikli.get(masa)).get(3),  //vraboten
+//								       ((ArrayList<String>)masaAndArtikli.get(masa)).get(4),  //prodavnica
+//								       ((ArrayList<String>)masaAndArtikli.get(masa)).get(5),  //masa
+//								       ((ArrayList<String>)masaAndArtikli.get(masa)).get(6),  //sifra
+//								       Integer.parseInt(((ArrayList<String>)masaAndArtikli.get(masa)).get(7)),  //kolicina
+//								       Integer.parseInt(((ArrayList<String>)masaAndArtikli.get(masa)).get(8)),  //cena
+//								       ((ArrayList<String>)masaAndArtikli.get(masa)).get(9),  //art_date
+//								       ((ArrayList<String>)masaAndArtikli.get(masa)).get(10));//art_time
+//					}
+//				}
+//			});
+//		}   //***************************************************************
+
+
+		//setting the list for names of products  *********
+//		for(int i = 0; i < insideProducts.size();i++) {
+//			searchAdapter.add((String) ((HashMap)insideProducts.get(i)).get("NAZIV"));
+//		}
+		//*************
+//		Log.i("The mapArtikli Array list is: ", mapArtikli+"");
+
+
+
+		//  WORK IN PROGRESS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+		tempListView2.setOnItemClickListener(new OnItemClickListener() {
+			
+						HashMap hm;
+			
+						@Override
+						public void onItemClick(AdapterView arg0, View arg1,int arg2, long arg3) {
+							hm = (HashMap) tempListView2.getItemAtPosition((int)arg3);
+//							hm.put("KOLICINA", "1");
+//							String sifra = ""+ hm.get("SIFRA");
+//							String kolicina = ""+ hm.get("KOLICINA");
+							double cena =  Double.parseDouble(hm.get("CENA")+"");
+							sum += ((int)cena);
+							sumNum.setText(sum+"");
+//							if(tempListView1.getCount()==0) {
+								
+								hm.put("KOLICINA", "1");
+								artikliNaracani.add(hm);
+								tempListView1.setAdapter(simpleCollectProduct1);
+//							} else {
+//								HashMap currentProduct = null;
+//								for(int i = 0; i < tempListView1.getCount(); i++) {
+//									currentProduct = (HashMap)tempListView1.getItemAtPosition(i);
+//									String currentSifra = currentProduct.get("SIFRA").toString();
+//									if(currentSifra.trim().equals(sifra.trim()) ) {
+//										currentProduct.put("KOLICINA", Integer.parseInt(currentProduct.get("KOLICINA").toString()) + Integer.parseInt(kolicina) );
+//									} else {
+//										hm = (HashMap) tempListView2.getItemAtPosition((int)arg3);
+//										hm.put("KOLICINA", "1");
+//										artikliNaracani.add(hm);
+//										tempListView1.setAdapter(simpleCollectProduct1);
+//									}
+//								}
+//								tempListView1.setAdapter(simpleCollectProduct1);
+//							}
+						}
+			
+		});
+		//  WORK IN PROGRESS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+		
+		
+
+//		final ProgressDialog dialog = ProgressDialog.show(this,
+//				"Narachka",
+//				"Prefrlanja na narachanite artikli...", true);
+//		final Handler handler = new Handler() {
+//			public void handleMessage(Message msg) {
+//				dialog.dismiss();
+//			}
+//		};
+
+
+//		else {
+//			saveCurrentOrder(unOrdered);
+//			masaBr.setText("");
+//			masaBr.requestFocus();
+//			artikliNaracani.clear();
+//			unOrderedBtn = new Button(StartClass.this.getApplicationContext());
+//			unOrderedBtn.setText("Neispratena masa broj: [ " + masa + " ]");
+//			tempListView1.addFooterView(unOrderedBtn);
+//			tempListView1.setAdapter(simpleCollectProduct1);
+//		}
+
+
+
+					//  **********  this method [ commented ] is for SOAP action kreiraj_naracka!
+//	public void sendSOAP(String prodav,String firma,String kasa,String vraboten,String prodavnica,String masa,
+//			String proc_name,String sifra,int cena,int kolicina,String art_time,String art_date) {
+
+
+//				PropertyInfo pi12 = new PropertyInfo();
+//		        pi12.setName("proc_name");
+//		        pi12.setValue(proc_name);
+//		        pi12.setType(String.class);
+//		        Request.addProperty(pi12);
+//		        
+//		        PropertyInfo pi13 = new PropertyInfo();
+//		        pi13.setName("prodav");
+//		        pi13.setValue(prodav);
+//		        pi13.setType(String.class);
+//		        Request.addProperty(pi13);
+				
+//				PropertyInfo pi1 = new PropertyInfo();
+//		        pi1.setName("iTopN");
+//		        pi1.setValue(iTopN);
+//		        pi1.setType(String.class);
+//		        Request.addProperty(pi1);
+
+
+
+		        //AndroidHttpTransport androidHttpTransport = new AndroidHttpTransport(URL);
+		        //androidHttpTransport.debug = true;
+		        //SoapObject resultsRequestSOAP;
+
+		        
+
+		        
+		        
+		        
+					//SoapObject response = (SoapObject) envelope.getResponse();
+					//resultsRequestSOAP = (SoapObject) envelope.bodyIn;
+					//Log.v("resultsRequestSOAP ---> :  ",	resultsRequestSOAP + "");
+					//Log.v("Response is---> :  ",	response.toString() +"");
+	
+	
+//  Method for total price implementation!!! [ unsuccessfull till now!!! 10 03 2014 ] 
+//	public static float sumOfProductPrices(Float productPrice) {
+//		if (productPrice != null) {
+//			if (productPrice > 0) {
+//				sum -= productPrice;
+//				return sum;
+//			}
+//		}
+//		return 0;
+//	}
+//
+//	public static float sumOfProductPrices(String productPrice) {
+//		
+//		if(productPrice != null) {
+//			if(Float.parseFloat(productPrice)>0) {
+//				try {
+//					sum += Float.parseFloat(productPrice);
+//					return sum;
+//				} catch (NumberFormatException nfe) {
+//					return 0;
+//				} catch (Exception e) {
+//					Log.i("==============>", "In the exception so the xception is not format type");
+//					return 0;
+//				}
+//			}
+//		}
+//		return 0;
+//	}
+
+
+	private final HttpTransportSE getHttpTransportSE() {
+	    HttpTransportSE ht = new HttpTransportSE(Proxy.NO_PROXY,URL,60000);
+	    ht.debug = true;
+	    ht.setXmlVersionTag("<!--?xml version=\"1.0\" encoding= \"UTF-8\" ?-->");
+	    return ht;
+	}
+
+
+//		if(soapValue) {
+			//****** working lists for restorant working orders with SOAP from .NET service calls *********************
+			
+			//**********************  Populating list views     ***********************************************************
+//			// key valus for list adapter
+//			final String[] from = new String[] { "br", "SIFRA", "NAZIV","KOLICINA", "CENA" };
+//			// id valus for text viws
+//			final int[] to = new int[] {R.id.br_txt,R.id.masi_txt,R.id.ime_txt_r,R.id.kolicina_txt_r,R.id.cena_txt_r};
+			
+			//=======================================================================================================
+			
+			
+			
+			
+			//List<HashMap<String, String>> insideProducts1 = new ArrayList<HashMap<String,String>>();
+			
+			
+
+
+
+		// With SimpleAdapter:
+			//  adapter for ListView - 2
+//			simpleCollectProduct2 = new SimpleAdapter(this, insideProducts, R.layout.list_lays, from, to);
+			
+//		} else if(jsonValue) {
+			//=================== JSON call from JAVA service back end ===================================
+			
+//			// key valus for list adapter
+//			final String[] from = new String[] { TAG_ID, TAG_SIFRA, TAG_NAZIV,TAG_KOLICINA, TAG_ED_PR_CENA };
+//			// id valus for text viws
+//			final int[] to = new int[] {R.id.br_txt,R.id.masi_txt,R.id.ime_txt_r,R.id.kolicina_txt_r,R.id.cena_txt_r};
+						
+//			simpleCollectProduct2 = new SimpleAdapter(StartClass.this, sifriList, 	R.layout.list_lays, from, to);
+			
+			//final ArrayList<Artikli> listOfArtikli = db.getAllArtikliData("ARTIKLI");
+			//db.close();
+//			insideProducts = new ArrayList<HashMap<String,String>>();
+			
+//			HashMap<String,String> mapArtikli = new HashMap<String,String>();
+//			int productsSize = listOfArtikli.size();
+//			
+//			// setting the list 2 addapter data
+//			for(int i = 0;i < productsSize ; i++) {
+//				 mapArtikli = new HashMap<String,String>();
+//				 mapArtikli.put("br", i+"");
+//				 mapArtikli.put("SIFRA", ((Artikli)listOfArtikli.get(i)).getSifri());
+//				 mapArtikli.put("NAZIV", ((Artikli)listOfArtikli.get(i)).getNaziv());
+//				 mapArtikli.put("KOLICINA",((Artikli)listOfArtikli.get(i)).getKolicina().toString() );
+//				 mapArtikli.put("CENA",((Artikli)listOfArtikli.get(i)).getCena().toString());
+//				 insideProducts.add(mapArtikli);
+//				 
+//			}	
+				
+				// With SimpleAdapter:
+				//  adapter for ListView - 2
+//				simpleCollectProduct2 = new SimpleAdapter(this, insideProducts, 	R.layout.list_lays, from, to);
+//		}	
+			//=================== XML  call from JAVA service back end ===================================
+//		else if(xmlValue) {
+//			
+//		} else {
+			//    DEFAULT
+			
+//		}
+		//===================  End of implementation =========================================================
+		
+		
+// set the macedonian font for name products in list view:
+		nazivProdukt = (TextView) findViewById(R.id.ime_txt_r);
+		Typeface typeFace = Typeface.createFromAsset(getAssets(),
+				"fonts/MacTmsB.ttf");
+		nazivProdukt.setTypeface(typeFace);
+===========================================================================================================================
+				SCROLL VIEW TEXT's  :
+<TextView
+            android:id="@+id/item1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_action_refresh_dark"
+            android:text="Item 1"
+            style="@style/AppBaseTheme" />
+
+        <TextView
+            android:id="@+id/item2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_action_select_all_dark"
+            android:text="Item 2"
+            style="@style/AppBaseTheme" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cat 1"
+            style="@style/AppBaseTheme" />
+
+        <TextView
+            android:id="@+id/item3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_action_refresh_dark"
+            android:text="Item 3"
+            style="@style/AppBaseTheme" />
+
+        <TextView
+            android:id="@+id/item4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_action_select_all_dark"
+            android:text="Item 4"
+            style="@style/AppBaseTheme" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cat 2"
+            style="@style/AppBaseTheme" />
+
+        <TextView
+            android:id="@+id/item5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_action_refresh_dark"
+            android:text="Item 5"
+            style="@style/AppBaseTheme" />
+
+        <TextView
+            android:id="@+id/item6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_action_select_all_dark"
+            android:text="Item 6"
+            style="@style/AppBaseTheme" />
+            
+ ===================================================================================================================
+
+    <string-array name="menu_categories">
+        <item>appetizer</item>
+        <item>soups</item>
+        <item>salads</item>
+        <item>steaks</item>
+        <item>pasta</item>
+        <item>chicken</item>
+        <item>desserts</item>
+        <item>specials</item>
+        <item>drinks</item>
+    </string-array>
+    
+    =====================================================================================================
+

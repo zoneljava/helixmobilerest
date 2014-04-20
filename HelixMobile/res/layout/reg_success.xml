@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fill" >
+
+    <Button
+        android:id="@+id/btn_sett_sync"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/btn_sett_start"
+        android:layout_below="@+id/btn_sett_start"
+        android:layout_marginTop="34dp"
+        android:background="@color/btn_b_color"
+        android:minHeight="@dimen/btn_setings"
+        android:minWidth="@dimen/btn_setings_w"
+        android:onClick="onSyncClick"
+        android:text="@string/sync_btn_str"
+        android:textColor="@color/btn_t_color"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn_sett_opt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btn_sett_sync"
+        android:layout_below="@+id/btn_sett_sync"
+        android:layout_marginTop="43dp"
+        android:background="@color/btn_b_color"
+        android:minHeight="@dimen/btn_setings"
+        android:minWidth="@dimen/btn_setings_w"
+        android:onClick="onOptionsClick"
+        android:text="@string/podesuvanja_btn_str"
+        android:textColor="@color/btn_t_color"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/izlez_btn_pod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/analogClock1"
+        android:layout_alignRight="@+id/analogClock1"
+        android:layout_below="@+id/btn_sett_opt"
+        android:layout_marginTop="60dp"
+        android:background="@color/btn_b_color"
+        android:minHeight="@dimen/btn_setings"
+        android:minWidth="@dimen/btn_setings_w"
+        android:onClick="clickIzlez"
+        android:text="@string/izlez_btn_str"
+        android:textColor="@color/btn_t_color"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn_sett_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:background="@color/btn_b_color"
+        android:minHeight="@dimen/btn_setings"
+        android:minWidth="@dimen/btn_setings_w"
+        android:onClick="onStartClick"
+        android:text="@string/start_btn_str"
+        android:textColor="@color/btn_t_color"
+        android:textStyle="bold" />
+
+    <AnalogClock
+        android:id="@+id/analogClock1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/izlez_btn_pod"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp" />
+
+    <DigitalClock
+        android:id="@+id/digitalClock1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btn_sett_opt"
+        android:layout_alignRight="@+id/btn_sett_opt"
+        android:layout_below="@+id/analogClock1"
+        android:layout_marginTop="23dp"
+        android:background="@color/btn_t_color"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="DigitalClock"
+        android:textSize="30sp" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/zonels" />
+
+</RelativeLayout>

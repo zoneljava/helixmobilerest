@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">HelixMobile</string>
+    <string name="action_settings">Settings</string>
+    <string name="artikli_btn_str">АРТИКЛИ</string>
+    <string name="opshto_btn_str">ОПШТО</string>
+    <string name="generalii_btn_str">ГЕНЕРАЛИИ</string>
+    <string name="pomosh_btn_str">" ПОМОШ"</string>
+    <string name="start_btn_str">СТАРТ</string>
+    <string name="sync_btn_str">СИНХРОНИЗАЦИЈА</string>
+    <string name="podesuvanja_btn_str">ПОДЕСУВАЊА</string>
+    <string name="izlez_btn_str">ИЗЛЕЗ</string>
+    <string name="log_txt_str">Логирање во HELIX MOBILE системот</string>
+    <string name="user_txt_str">Корисник</string>
+    <string name="password_txt_str">Лозинка</string>
+    <string name="ok_btn_str">ВЛЕЗ</string>
+    <string name="masa_btn_str">Маси</string>
+    <string name="delete_btn_str">Бриши</string>
+    <string name="send_order_btn_str">Испрати Нарачка</string>
+    <string name="ordered_txt_str">Нарачани артикли</string>
+    <string name="search_txt_str">Пребарај Артикли</string>
+    <string name="meni_txt_str">Мени на Артикли</string>
+    <string name="masa_txt_str">Маса Бр.</string>
+    <string name="search_txt_inp">Пребарај шифри</string>
+    <string name="quantity_txt_str">Количина:</string>
+    <string name="ok_btn">Во Ред</string>
+    <string name="firma_txt_str">Име на Фирма</string>
+    <string name="adresa_txt_str">Адреса</string>
+    <string name="smetka_txt_str">Жиро Сметка</string>
+    <string name="broj_txt_str">Број</string>
+    <string name="telefon_txt_str">Телефон / Факс</string>
+    <string name="server_txt_str">Име на серверот</string>
+    <string name="db_txt_str">Датабаза име</string>
+    <string name="username_txt_str">Корисник</string>
+    <string name="pass_txt_str">Лозинка</string>
+    <string name="hlive_user">HLive User</string>
+    <string name="cena_txt_str">Вкупно:</string>
+    <string name="sum_txt_str">Вкупно</string>
+    <string name="get_query_txt_str">get query</string>
+    <string name="prodav_txt_str">Продавница</string>
+    <string name="kasa_txt_str">Каса</string>
+    <string name="meni_artikl_txt_str">Мени на Артикли</string>
+    <string name="ime_na_artikli">Име на Артикл</string>
+    
+    <string name="md__drawerOpenIndicatorDesc">Close drawer</string>
+    <string name="md__drawerClosedIndicatorDesc">Open drawer</string>
+    <string name="masi_broj_str">Број на маса:</string>
+    <string name="main_menu">Главно Мени</string>
+    <string name="izlez_masi_str_">ИЗЛЕЗ</string>
+    
+
+
+</resources>

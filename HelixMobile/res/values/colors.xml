@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="btn_b_color">#000000</color>
+    <color name="btn_t_color">#FFFFFF</color>
+    <color name="text_inp">#D3E0E0</color>
+    <color name="sum_txt">#FFFFDD</color>
+    
+    <!-- The default background of the menu. -->
+    <color name="md__defaultBackground">#FF555555</color>
+    <color name="golden_txt">#DCF26F</color>
+</resources>

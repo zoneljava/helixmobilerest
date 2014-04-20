@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/podesuvanja_layout"
+    style="@style/AppBaseTheme"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical|center_horizontal"
+    android:background="@drawable/fill"
+    android:gravity="center_vertical|center_horizontal" >
+
+    <Button
+        android:id="@+id/generalii_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/opshto_btn"
+        android:layout_below="@+id/opshto_btn"
+        android:layout_marginTop="10dp"
+        android:background="@color/btn_b_color"
+        android:minHeight="@dimen/btn_setings"
+        android:minWidth="@dimen/btn_stngs_dsw"
+        android:onClick="onGeneraliiClick"
+        android:text="@string/generalii_btn_str"
+        android:textColor="@color/btn_t_color"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/pomosh_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/generalii_btn"
+        android:layout_below="@+id/generalii_btn"
+        android:layout_marginTop="10dp"
+        android:background="@color/btn_b_color"
+        android:enabled="false"
+        android:minHeight="@dimen/btn_setings"
+        android:minWidth="@dimen/btn_stngs_dsw"
+        android:text="@string/pomosh_btn_str"
+        android:textColor="@color/btn_t_color"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/izlez_btn_pod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/pomosh_btn"
+        android:layout_alignRight="@+id/pomosh_btn"
+        android:layout_below="@+id/pomosh_btn"
+        android:layout_marginTop="10dp"
+        android:background="@color/btn_b_color"
+        android:minHeight="@dimen/btn_setings"
+        android:minWidth="@dimen/btn_stngs_dsw"
+        android:onClick="clickIzlezPod"
+        android:text="@string/izlez_btn_str"
+        android:textColor="@color/btn_t_color"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/artikli_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/opshto_btn"
+        android:layout_centerHorizontal="true"
+        android:enabled="false"
+        android:minHeight="@dimen/btn_setings"
+        android:minWidth="@dimen/btn_stngs_dsw"
+        android:text="@string/artikli_btn_str" />
+
+    <Button
+        android:id="@+id/opshto_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView1"
+        android:layout_centerHorizontal="true"
+        android:background="@color/btn_b_color"
+        android:gravity="center_vertical|center_horizontal|fill_vertical"
+        android:minHeight="@dimen/btn_setings"
+        android:minWidth="@dimen/btn_stngs_dsw"
+        android:onClick="onOpshtoClick"
+        android:text="@string/opshto_btn_str"
+        android:textColor="@color/btn_t_color"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="30dp"
+        android:layout_marginTop="110dp"
+        android:src="@drawable/zonels" />
+
+</RelativeLayout>
